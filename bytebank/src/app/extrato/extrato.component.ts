@@ -19,5 +19,4 @@ export class ExtratoComponent implements OnInit {
       this.transferencias = transferencias;
     })
   }
-
 }
