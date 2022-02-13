@@ -1,3 +1,4 @@
+import { MensagemComponent } from './mensagem/mensagem.component';
 import { AppRoutingModule } from './app.routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { NovaTransferenciaComponent } from './nova-transferencia/nova-transferencia.component';
@@ -16,7 +17,8 @@ registerLocaleData(localePt, 'pt');
   declarations: [
     AppComponent,
     NovaTransferenciaComponent,
-    ExtratoComponent
+    ExtratoComponent,
+    MensagemComponent
   ],
   imports: [
     BrowserModule,

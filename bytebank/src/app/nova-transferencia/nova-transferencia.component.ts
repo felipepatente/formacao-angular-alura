@@ -10,8 +10,7 @@ import { TransferenciaService } from "../services/transferencia.service";
 })
 export class NovaTransferenciaComponent{
 
-  valor: number;
-  destino: number;
+  transferencia: Transferencia = {};
 
   constructor(
     private service: TransferenciaService,
@@ -20,20 +19,16 @@ export class NovaTransferenciaComponent{
 
   transferir(): void{
     console.log('Solicitada nova transferência');
-    const valorEmitir: Transferencia = {valor: this.valor, destino: this.destino};
 
-    this.service.adicionar(valorEmitir).subscribe(resultado => {
+    this.service.adicionar(this.transferencia).subscribe(resultado => {
       console.log(resultado);
-      this.limparCampos();
       this.router.navigateByUrl('extrato');
     },
       (error) => console.error(error)
     );
   }
 
-  limparCampos(){
-    this.valor = 0;
-    this.destino = 0;
+  teste(): void{
+    alert('teste');
   }
-
 }
