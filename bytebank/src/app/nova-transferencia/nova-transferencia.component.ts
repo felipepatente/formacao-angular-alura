@@ -27,8 +27,4 @@ export class NovaTransferenciaComponent{
       (error) => console.error(error)
     );
   }
-
-  teste(): void{
-    alert('teste');
-  }
 }
