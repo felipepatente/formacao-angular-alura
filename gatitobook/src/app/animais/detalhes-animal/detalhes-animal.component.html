@@ -9,6 +9,9 @@
       <div class="col-lg-4">
         <small>
           <p class="text-left break-word"></p>
+          <button (click)="curtir()" class="fa fa-heart-o fa-2x mr-2 pull-left">{{animal.likes}}</button>
+          <button class="fa fa-comment-o fa-2x mr-2 ml-2">{{animal.comments}}</button>
+          <i (click)="excluir()" class="fa fa-trash-o fa-2x pull-right" aria-hidden="true">Excluir</i>
         </small>
       </div>
     </div>
