@@ -5,10 +5,10 @@ import { Animal } from '../animais';
 import { AnimaisService } from '../animais.service';
 
 @Component({
-  selector: 'app-detalhes-animal',
-  templateUrl: './detalhes-animal.component.html'
+  selector: 'app-detalhe-animal',
+  templateUrl: './detalhe-animal.component.html'
 })
-export class DetalhesAnimalComponent implements OnInit {
+export class DetalheAnimalComponent implements OnInit {
 
   animalId!: number;
   animal$!: Observable<Animal>;

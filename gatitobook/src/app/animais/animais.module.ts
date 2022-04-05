@@ -8,7 +8,7 @@ import { AnimaisRoutingModule } from './animais-routing.module';
 import { ListaAnimaisComponent } from './lista-animais/lista-animais.component';
 import { AnimalComponent } from './animal/animal.component';
 import { GradeFotosAnimaisComponent } from './grade-fotos-animais/grade-fotos-animais.component';
-import { DetalhesAnimalComponent } from './detalhes-animal/detalhes-animal.component';
+import { DetalheAnimalComponent } from './detalhe-animal/detalhe-animal.component';
 import { ComentariosComponent } from './detalhe-animal/comentarios/comentarios.component';
 
 
@@ -17,7 +17,7 @@ import { ComentariosComponent } from './detalhe-animal/comentarios/comentarios.c
     ListaAnimaisComponent,
     AnimalComponent,
     GradeFotosAnimaisComponent,
-    DetalhesAnimalComponent,
+    DetalheAnimalComponent,
     ComentariosComponent
   ],
   imports: [

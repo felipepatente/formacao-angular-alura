@@ -1,4 +1,4 @@
-import { DetalhesAnimalComponent } from './detalhes-animal/detalhes-animal.component';
+import { DetalheAnimalComponent } from './detalhe-animal/detalhe-animal.component';
 import { ListaAnimaisComponent } from './lista-animais/lista-animais.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -10,7 +10,7 @@ const routes: Routes = [
   },
   {
     path:':animalId',
-    component: DetalhesAnimalComponent
+    component: DetalheAnimalComponent
   }
 ];
 
