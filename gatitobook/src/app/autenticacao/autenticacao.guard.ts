@@ -20,5 +20,4 @@ export class AutenticacaoGuard implements CanLoad {
     return true;
 
   }
-
 }
