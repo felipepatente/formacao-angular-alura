@@ -14,8 +14,8 @@ const routes: Routes = [
   {
     path: 'animais',
     loadChildren: ()=> import('./animais/animais.module')
-    .then(m => m.AnimaisModule),
-    canLoad: [AutenticacaoGuard]
+    .then(m => m.AnimaisModule)
+    ,canLoad: [AutenticacaoGuard]
   }
 ];
 
