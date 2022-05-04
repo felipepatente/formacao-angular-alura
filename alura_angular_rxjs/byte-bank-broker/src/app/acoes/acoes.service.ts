@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map } from 'rxjs/operators';
+import { map, pluck, tap } from 'rxjs/operators';
 import { Acao } from './modelo/acoes';
 
 @Injectable({
@@ -13,6 +13,9 @@ export class AcoesService {
   getAcoes(){
     return this.httpCliente.get<any>('http://localhost:3000/acoes')
       .pipe(
+        tap((valor) => console.log(valor)),
+        // map((api) => api.payload),
+        pluck('payload'),
         map((acoes) =>
           acoes.sort((acaoA, acaoB) => this.ordenaPorCodigo(acaoA, acaoB))
         )
@@ -28,4 +31,5 @@ export class AcoesService {
 
     return 0;
   }
+
 }
