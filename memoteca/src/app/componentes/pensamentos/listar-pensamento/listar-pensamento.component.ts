@@ -10,21 +10,21 @@ export class ListarPensamentoComponent implements OnInit {
   listaPensamentos = [
 
     {
-      conteudo: 'I love Angular',
+      conteudo: 'Passo informações para o componente filho',
+      autoria: 'Componente pai',
+      modelo: 'modelo1'
+    },
+
+    {
+      conteudo: 'Comunicação entre componentes',
       autoria: 'Nay',
       modelo: 'modelo3'
     },
 
     {
-      conteudo: 'I love Angular',
-      autoria: 'Nay',
-      modelo: 'modelo3'
-    },
-
-    {
-      conteudo: 'I love Angular',
-      autoria: 'Nay',
-      modelo: 'modelo3'
+      conteudo: 'Minha propriedade é decorada com @Input()',
+      autoria: 'Componente filho',
+      modelo: 'modelo2'
     },
 
   ];
