@@ -41,7 +41,6 @@
     margin: 0.5rem 0 2rem;
   }
   
-  
   .criar-pensamentos form .textarea {
     border: none;
     padding: 1rem 2rem;
@@ -132,4 +131,12 @@
   
   input[type='radio']:checked+.custom-radio span {
     background: #154580;
+  }
+
+  .mensagem__erro {
+    font-size: 12px;
+    margin-left: 5px;
+    color: red;
+    margin-top: -25px;
+    margin-bottom: 20px;
   }
