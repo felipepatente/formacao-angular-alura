@@ -15,7 +15,7 @@
     {
       "id": 3,
       "conteudo": "Angular é o melhor nada",
-      "autoria": "Dev Alura",
+      "autoria": "Felipe",
       "modelo": "modelo1"
     },
     {
@@ -43,10 +43,10 @@
       "id": 7
     },
     {
-      "conteudo": "asdfasdf",
-      "autoria": "asdfasdfsdf",
-      "modelo": "modelo1",
-      "id": 8
+      "id": 8,
+      "conteudo": "Editando pensamento",
+      "autoria": "Felipe",
+      "modelo": "modelo1"
     }
   ]
 }
