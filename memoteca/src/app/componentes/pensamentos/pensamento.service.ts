@@ -17,10 +17,6 @@ export class PensamentoService{
 
         const itensPorPagina = 6;
 
-        const url = `${this.API}?_page=${pagina}&_limit=${itensPorPagina}`
-          
-        // return this.http.get<Pensamento[]>(url);
-
         let params = new HttpParams()
             .set("_page", pagina)
             .set("_limit", itensPorPagina);
