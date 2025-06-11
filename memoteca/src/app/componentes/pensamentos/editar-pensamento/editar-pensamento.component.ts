@@ -17,7 +17,8 @@ export class EditarPensamentoComponent implements OnInit {
     id: 0,
     conteudo: '',
     autoria: '',
-    modelo: ''
+    modelo: '',
+    favorito: false
   }
 
   constructor(
@@ -33,7 +34,8 @@ export class EditarPensamentoComponent implements OnInit {
       id: [0],
       conteudo: [''],
       autoria: [''],
-      modelo: ['']
+      modelo: [''],
+      favorito: [false]
     });
 
     const id = this.rotaAtiva.snapshot.paramMap.get('id');
@@ -46,7 +48,8 @@ export class EditarPensamentoComponent implements OnInit {
         id: [pensamento.id],
         conteudo: [pensamento.conteudo, Validators.compose([Validators.required])],
         autoria: [pensamento.autoria, Validators.compose([Validators.required, Validators.minLength(3)])],
-        modelo: [pensamento.modelo]
+        modelo: [pensamento.modelo],
+        favorito: [pensamento.favorito]
       });
     });
 
