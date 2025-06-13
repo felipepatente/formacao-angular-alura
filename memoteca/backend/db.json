@@ -6,7 +6,6 @@
       "autoria": "Nay",
       "modelo": "modelo1",
       "favorito": true
-      
     },
     {
       "id": 2,
@@ -20,7 +19,7 @@
       "conteudo": "Angular é o melhor nada",
       "autoria": "Felipe",
       "modelo": "modelo1",
-      "favorito": true
+      "favorito": false
     },
     {
       "conteudo": "Que coisa doida",
@@ -33,14 +32,14 @@
       "conteudo": "Formulário reativo de novo",
       "autoria": "Angular",
       "modelo": "modelo1",
-      "favorito": false,
+      "favorito": true,
       "id": 5
     },
     {
       "conteudo": "Formulário reativo de novo novo",
       "autoria": "Angular",
       "modelo": "modelo1",
-      "favorito": false,
+      "favorito": true,
       "id": 6
     },
     {
