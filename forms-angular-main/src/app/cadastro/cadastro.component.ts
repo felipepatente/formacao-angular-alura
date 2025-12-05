@@ -9,6 +9,8 @@ import { NgForm } from '@angular/forms';
 })
 export class CadastroComponent implements OnInit {
 
+  mensagemEmail = 'O email deve ter o seguinte padrão "exemplo@dominio.com"';
+
   constructor(private router: Router) { }
 
   ngOnInit(): void {
