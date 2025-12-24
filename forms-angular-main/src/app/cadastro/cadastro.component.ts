@@ -1,6 +1,7 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { ConsultaCepService } from '../service/consulta-cep.service';
 
 @Component({
   selector: 'app-cadastro',
@@ -11,9 +12,16 @@ export class CadastroComponent implements OnInit {
 
   mensagemEmail = 'O email deve ter o seguinte padrão "exemplo@dominio.com"';
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private consultaCepService: ConsultaCepService) { }
 
   ngOnInit(): void {
+  }
+
+  consultaCEP(ev: any){
+    const cep = ev.target.value;
+    return this.consultaCepService.getConsultaCep(cep).subscribe(resultado => {
+      console.log(resultado);
+    })
   }
 
   cadastrar(form : NgForm){
