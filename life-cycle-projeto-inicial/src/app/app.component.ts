@@ -18,5 +18,9 @@ export class AppComponent implements OnInit {
     this.listaDeCompra = this.listaService.getListaDeCompra();
     console.log(this.listaDeCompra);
   }
+
+  editarItem(item: Item): void{
+    console.log(item);
+  }
   
 }
