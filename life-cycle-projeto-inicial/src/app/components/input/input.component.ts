@@ -11,23 +11,36 @@ export class InputComponent implements OnInit, OnChanges {
 
   @Input() itemQuevaiSerEditado!: Item;
   valorItem!: string;
+  editando = false;
+  textoBtn = 'Salvar item';
 
   constructor(private listaService: ListaDeCompraService) { }
+  
+  ngOnInit(): void { }
 
   ngOnChanges(changes: SimpleChanges): void {
     if(!changes['itemQuevaiSerEditado'].firstChange){
+      this.editando = true;
+      this.textoBtn = 'Editar item';
       this.valorItem = this.itemQuevaiSerEditado?.nome;
     }
   }
 
-  ngOnInit(): void { }
+  editarItem(){
+    this.listaService.editarItemDaLista(this.itemQuevaiSerEditado, this.valorItem);
+    this.limparCampo();
+    this.editando = false;
+    this.textoBtn = 'Salvar item';
+  }  
+
+  limparCampo(){
+    this.valorItem = '';
+  }
 
   adicionarItem(): void{
     this.listaService.adicionarItemNaLista(this.valorItem);    
     this.limparCampo();
   }
 
-  limparCampo(){
-    this.valorItem = '';
-  }
+  
 }
