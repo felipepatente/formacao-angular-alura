@@ -18,11 +18,11 @@ export class ItemComponent implements OnInit, OnChanges {
   constructor() { }
   
   ngOnInit(): void { 
-    console.log('OnInit');
+    
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log('OnChanges');
+    
   }
 
   editarItem(): void{
