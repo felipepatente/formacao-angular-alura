@@ -33,4 +33,9 @@ export class AppComponent implements OnInit, DoCheck {
     this.listaDeCompra.splice(index, 1);    
   }
 
+  limparLista(){
+    this.listaService.limparLista();
+    this.listaDeCompra = this.listaService.getListaDeCompra();
+  }
+
 }
