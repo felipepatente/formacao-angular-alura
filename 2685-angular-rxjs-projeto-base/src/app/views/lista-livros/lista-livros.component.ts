@@ -8,13 +8,25 @@ import { LivroService } from 'src/app/service/livro.service';
 })
 export class ListaLivrosComponent {
 
-  listaLivros: [];
+  listaLivros: [] = [];
   campoBusca: string = '';
 
   constructor(private service: LivroService) { }
 
   buscarLivros(): void{
-    this.service.buscar(this.campoBusca);
+
+    if (!this.campoBusca.trim()) return;
+
+    this.service.buscar(this.campoBusca).subscribe({
+      next: (retornoApi) => {
+        console.log(retornoApi);
+        // A API do Google Books retorna os resultados dentro da propriedade 'items'
+        // this.listaLivros = retornoApi.items || []; 
+      },
+      error: (erro) => {
+        console.error('Erro ao buscar livros:', erro);
+      }
+    });
   }
 
 }
