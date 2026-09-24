@@ -25,6 +25,9 @@ export class ListaLivrosComponent {
       },
       error: (erro) => {
         console.error('Erro ao buscar livros:', erro);
+      },
+      complete: () => {
+        console.log('observable terminada');
       }
     });
   }
