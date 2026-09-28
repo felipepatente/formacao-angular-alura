@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { LivroService } from 'src/app/service/livro.service';
 
 @Component({
@@ -6,18 +7,19 @@ import { LivroService } from 'src/app/service/livro.service';
   templateUrl: './lista-livros.component.html',
   styleUrls: ['./lista-livros.component.css']
 })
-export class ListaLivrosComponent {
+export class ListaLivrosComponent implements OnDestroy {
 
   listaLivros: [] = [];
   campoBusca: string = '';
+  subscription!: Subscription;
 
   constructor(private service: LivroService) { }
-
+  
   buscarLivros(): void{
 
     if (!this.campoBusca.trim()) return;
 
-    this.service.buscar(this.campoBusca).subscribe({
+    this.subscription = this.service.buscar(this.campoBusca).subscribe({
       next: (retornoApi) => {
         console.log(retornoApi);
         // A API do Google Books retorna os resultados dentro da propriedade 'items'
@@ -30,6 +32,11 @@ export class ListaLivrosComponent {
         console.log('observable terminada');
       }
     });
+  }
+
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
+    console.log('Destruiu a inscrição');
   }
 
 }
